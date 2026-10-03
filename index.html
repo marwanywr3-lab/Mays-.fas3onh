@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مركز أبحاث سلوكيات ميس الدولية 🕵️‍♀️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #f43f5e;
+      --accent-glow: rgba(244, 63, 94, 0.3);
+      --text: #f8fafc;
+      --subtext: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Tajawal', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 24px 16px;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 650px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #fb7185;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: var(--subtext);
+      font-size: 0.95rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Radar / Meter */
+    .meter-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    .progress-bar {
+      height: 10px;
+      background: #334155;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #fb7185, #f43f5e);
+      border-radius: 999px;
+      transition: width 1s ease-in-out;
+    }
+
+    /* Buttons & Interactive */
+    .btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1rem;
+      transition: transform 0.1s ease, filter 0.2s;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .runaway-container {
+      position: relative;
+      height: 120px;
+      border: 2px dashed #475569;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    #runawayBtn {
+      position: absolute;
+      width: auto;
+      padding: 10px 24px;
+      background: #10b981;
+      transition: top 0.15s ease, left 0.15s ease;
+    }
+
+    /* Random Quote Generator */
+    .quote-box {
+      font-style: italic;
+      color: #e2e8f0;
+      background: #0f172a;
+      padding: 14px;
+      border-radius: 8px;
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 12px;
+      border-right: 4px solid var(--accent);
+    }
+
+    /* Secret Vault */
+    .hidden-content {
+      display: none;
+      margin-top: 14px;
+      padding: 12px;
+      background: #0f172a;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      color: #38bdf8;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      color: #64748b;
+      font-size: 0.8rem;
+      margin-top: 10px;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>🚨 المرصد الفيدرالي لمراقبة ميس 🚨</h1>
+      <p>تقرير سري للغاية حول التحركات والقرارات المنزلية العشوائية</p>
+    </header>
+
+    <!-- مؤشرات الأداء الكارثي -->
+    <section class="card">
+      <h2>📊 تحليل النشاط اليومي</h2>
+      <div class="meter-container">
+        <div>
+          <div class="stat-row">
+            <span>نسبة الاستحواذ على ريموت التلفزيون</span>
+            <span>99.9%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 99.9%;"></div></div>
+        </div>
+
+        <div>
+          <div class="stat-row">
+            <span>سرعة اختفاء الشاحن من الغرفة</span>
+            <span>ماخ 3 (فوق صوتي)</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 94%;"></div></div>
+        </div>
+
+        <div>
+          <div class="stat-row">
+            <span>احتمالية قول "مب أنا، أنت اللي سويتها"</span>
+            <span>100%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- مولد دراما وتبريرات -->
+    <section class="card">
+      <h2>🎭 مولد تبريرات ميس الرسمية</h2>
+      <div class="quote-box" id="quoteDisplay">اضغط الزر لتحليل أحدث تصريح مسجل...</div>
+      <button class="btn" onclick="generateExcuse()">سحب تبرير عشوائي</button>
+    </section>
+
+    <!-- زر الهروب الماكر -->
+    <section class="card">
+      <h2>🤝 وثيقة اعتراف بالخطأ</h2>
+      <p style="color: var(--subtext); font-size: 0.85rem; margin-bottom: 12px;">
+        حاولي تضغطين زر "أنا الغلطانة واعتذر" لتسجيل البلاغ:
+      </p>
+      <div class="runaway-container" id="runawayArea">
+        <button id="runawayBtn" onmouseover="dodge()" onclick="dodge()">أنا الغلطانة وأعتذر 🙋‍♀️</button>
+      </div>
+    </section>
+
+    <!-- الصندوق السري -->
+    <section class="card">
+      <h2>📂 ملف الفضائح السري</h2>
+      <p style="color: var(--subtext); font-size: 0.85rem; margin-bottom: 12px;">
+        ملف يحتوي على كل المرات اللي قلتي فيها "خلاص ببدأ أروق وما بصارخ":
+      </p>
+      <button class="btn" style="background: #3b82f6;" onclick="revealSecret()">فك تشفير الملف 🔓</button>
+      <div class="hidden-content" id="secretBox">
+        ⚠️️ خطأ في النظام 404: الملف فارغ تماماً... لم يتم العثور على أي لحظة هدوء مسجلة في التاريخ!
+      </div>
+    </section>
+
+    <footer>
+      تم التطوير بواسطة الإدارة العليا لرصد المناوشات الأخوية © 2026
+    </footer>
+  </div>
+
+  <script>
+    const excuses = [
+      "أنا ما أخذت الشاحن، أصلاً هو جاء عندي لحاله!",
+      "والله كنت نايمة ومادريت عنكم.",
+      "أنت اللي بديت أول، أنا جالسة بحالي أصلاً!",
+      "عادي ترى ما يوجع، ليش تسوي دراما؟",
+      "أمي قالت لي سوي كذا (كذب صريح)",
+      "أنا ما طلبت شي... بس جيب لي معك طلب!"
+    ];
+
+    function generateExcuse() {
+      const display = document.getElementById("quoteDisplay");
+      const randomIndex = Math.floor(Math.random() * excuses.length);
+      display.innerText = excuses[randomIndex];
+    }
+
+    function dodge() {
+      const btn = document.getElementById("runawayBtn");
+      const container = document.getElementById("runawayArea");
+      
+      const maxX = container.clientWidth - btn.clientWidth - 10;
+      const maxY = container.clientHeight - btn.clientHeight - 10;
+
+      const randomX = Math.max(10, Math.floor(Math.random() * maxX));
+      const randomY = Math.max(10, Math.floor(Math.random() * maxY));
+
+      btn.style.left = randomX + "px";
+      btn.style.top = randomY + "px";
+    }
+
+    function revealSecret() {
+      const box = document.getElementById("secretBox");
+      box.style.display = box.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
